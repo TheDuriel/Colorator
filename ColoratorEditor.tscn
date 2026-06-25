@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://klueygx8t40i"]
+
+[ext_resource type="Script" uid="uid://du81x6gyqj6dt" path="res://addons/Colorator/ColoratorEditor.gd" id="1_tn66p"]
+
+[node name="ColoratorEditor" type="MarginContainer" unique_id=1118710657 node_paths=PackedStringArray("_color_rect_preview", "_line_edit_name", "_button_save", "_button_copy", "_button_delete", "_box_H", "_box_S", "_box_V", "_box_R", "_box_G", "_box_B", "_box_A", "_line_edit_hex", "_button_hex_copy", "_button_hex_paste")]
+offset_right = 383.0
+offset_bottom = 146.0
+script = ExtResource("1_tn66p")
+_color_rect_preview = NodePath("VBoxContainer/Meta/VBoxContainer/ColorPickerButton")
+_line_edit_name = NodePath("VBoxContainer/Meta/VBoxContainer/LineEditName")
+_button_save = NodePath("VBoxContainer/Meta/HBoxContainer/ButtonSave")
+_button_copy = NodePath("VBoxContainer/Meta/HBoxContainer/ButtonCopy")
+_button_delete = NodePath("VBoxContainer/Meta/HBoxContainer/ButtonDelete")
+_box_H = NodePath("VBoxContainer/Controls/HSV/H")
+_box_S = NodePath("VBoxContainer/Controls/HSV/S")
+_box_V = NodePath("VBoxContainer/Controls/HSV/V")
+_box_R = NodePath("VBoxContainer/Controls/RGB/R")
+_box_G = NodePath("VBoxContainer/Controls/RGB/G")
+_box_B = NodePath("VBoxContainer/Controls/RGB/B")
+_box_A = NodePath("VBoxContainer/Controls/Alpha/A")
+_line_edit_hex = NodePath("VBoxContainer/HBoxContainer/LineEditHex")
+_button_hex_copy = NodePath("VBoxContainer/HBoxContainer/ButtonHexCopy")
+_button_hex_paste = NodePath("VBoxContainer/HBoxContainer/ButtonHexPaste")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=864437923]
+layout_mode = 2
+
+[node name="Meta" type="HBoxContainer" parent="VBoxContainer" unique_id=2126312224]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Meta" unique_id=1976678190]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LineEditName" type="LineEdit" parent="VBoxContainer/Meta/VBoxContainer" unique_id=687847586]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+placeholder_text = "color_name"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/Meta/VBoxContainer" unique_id=971561473]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 1, 1, 1)
+edit_intensity = false
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer/Meta" unique_id=1020078119]
+layout_mode = 2
+
+[node name="ButtonSave" type="Button" parent="VBoxContainer/Meta/HBoxContainer" unique_id=1602602048]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="ButtonCopy" type="Button" parent="VBoxContainer/Meta/HBoxContainer" unique_id=623513032]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Copy"
+
+[node name="ButtonDelete" type="Button" parent="VBoxContainer/Meta/HBoxContainer" unique_id=1196819759]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Delete"
+
+[node name="HSeparator-1" type="HSeparator" parent="VBoxContainer" unique_id=459781970]
+layout_mode = 2
+
+[node name="Controls" type="HBoxContainer" parent="VBoxContainer" unique_id=1829869643]
+layout_mode = 2
+
+[node name="HSV" type="GridContainer" parent="VBoxContainer/Controls" unique_id=2010592981]
+layout_mode = 2
+columns = 2
+
+[node name="Label-1" type="Label" parent="VBoxContainer/Controls/HSV" unique_id=921026104]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+text = "H"
+horizontal_alignment = 2
+
+[node name="H" type="SpinBox" parent="VBoxContainer/Controls/HSV" unique_id=1894834672]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 360.0
+alignment = 2
+suffix = "°"
+
+[node name="Label-2" type="Label" parent="VBoxContainer/Controls/HSV" unique_id=828593322]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+text = "S"
+horizontal_alignment = 2
+
+[node name="S" type="SpinBox" parent="VBoxContainer/Controls/HSV" unique_id=1956459996]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+suffix = "%"
+
+[node name="Label-3" type="Label" parent="VBoxContainer/Controls/HSV" unique_id=1867473962]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+text = "V"
+horizontal_alignment = 2
+
+[node name="V" type="SpinBox" parent="VBoxContainer/Controls/HSV" unique_id=1467536279]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+suffix = "%"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Controls" unique_id=704336992]
+layout_mode = 2
+
+[node name="RGB" type="GridContainer" parent="VBoxContainer/Controls" unique_id=131657308]
+layout_mode = 2
+columns = 2
+
+[node name="Label-1" type="Label" parent="VBoxContainer/Controls/RGB" unique_id=220202512]
+modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+text = "R"
+horizontal_alignment = 2
+
+[node name="R" type="SpinBox" parent="VBoxContainer/Controls/RGB" unique_id=1278436698]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 255.0
+alignment = 2
+
+[node name="Label-2" type="Label" parent="VBoxContainer/Controls/RGB" unique_id=1456490563]
+modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+text = "G"
+horizontal_alignment = 2
+
+[node name="G" type="SpinBox" parent="VBoxContainer/Controls/RGB" unique_id=1429585414]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 255.0
+alignment = 2
+
+[node name="Label-3" type="Label" parent="VBoxContainer/Controls/RGB" unique_id=31623760]
+modulate = Color(0, 0, 1, 1)
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+text = "B"
+horizontal_alignment = 2
+
+[node name="B" type="SpinBox" parent="VBoxContainer/Controls/RGB" unique_id=626354177]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 255.0
+alignment = 2
+
+[node name="VSeparator-2" type="VSeparator" parent="VBoxContainer/Controls" unique_id=841595820]
+layout_mode = 2
+
+[node name="Alpha" type="GridContainer" parent="VBoxContainer/Controls" unique_id=1557951476]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 2
+
+[node name="Label-1" type="Label" parent="VBoxContainer/Controls/Alpha" unique_id=2126799890]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+text = "A"
+horizontal_alignment = 2
+
+[node name="A" type="SpinBox" parent="VBoxContainer/Controls/Alpha" unique_id=2054072884]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+suffix = "%"
+
+[node name="HSeparator-2" type="HSeparator" parent="VBoxContainer" unique_id=630876999]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1832091803]
+layout_mode = 2
+
+[node name="ButtonHexCopy" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1637594665]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copy"
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1234114848]
+layout_mode = 2
+text = "#"
+
+[node name="LineEditHex" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=1903728778]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "hex_color"
+alignment = 2
+
+[node name="ButtonHexPaste" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=560036784]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Paste"

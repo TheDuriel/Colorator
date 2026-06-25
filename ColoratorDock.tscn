@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://d3dknqnrxxk4f"]
+
+[ext_resource type="Script" uid="uid://b4vmnocp6gkgv" path="res://addons/Colorator/ColoratorDock.gd" id="1_r7dcs"]
+[ext_resource type="Script" uid="uid://domyp05k0o1k4" path="res://addons/Colorator/ColoratorSwatchContainer.gd" id="2_2fgxx"]
+[ext_resource type="PackedScene" uid="uid://klueygx8t40i" path="res://addons/Colorator/ColoratorEditor.tscn" id="3_hwtft"]
+
+[node name="ColoratorDock" type="EditorDock" unique_id=1882737639 node_paths=PackedStringArray("_box_container", "_scroll_container", "_swatch_container", "_editor")]
+custom_minimum_size = Vector2(0, 256)
+offset_right = 40.0
+offset_bottom = 256.0
+title = "Colorator"
+default_slot = 8
+available_layouts = 7
+script = ExtResource("1_r7dcs")
+_box_container = NodePath("HBoxContainer")
+_scroll_container = NodePath("HBoxContainer/ScrollContainer")
+_swatch_container = NodePath("HBoxContainer/ScrollContainer/ColoratorSwatchContainer")
+_editor = NodePath("HBoxContainer/ColoratorEditor")
+
+[node name="HBoxContainer" type="BoxContainer" parent="." unique_id=734109423]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer" unique_id=987771862]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="ColoratorSwatchContainer" type="FlowContainer" parent="HBoxContainer/ScrollContainer" unique_id=1694168932]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_2fgxx")
+
+[node name="ColoratorEditor" parent="HBoxContainer" unique_id=1118710657 instance=ExtResource("3_hwtft")]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
