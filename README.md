@@ -1,4 +1,4 @@
-# Colorizor
+# Colorator
 Godot Addon for color swatch management. Photoshop style.
 
 # What does this do?
