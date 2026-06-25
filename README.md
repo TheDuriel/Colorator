@@ -10,7 +10,7 @@ This addon adds a new Dock to the Godot editor which displays color swatches, an
 * Right Click: Copy the HTML code for the color. Alpha is included if it is not 1.0.
 * Right Click + Shift: Duplicate the color and select the new instance.
 
-Color editing is possible using HSV (°%%), RGB8 (255, 255, 255), Alpha (%), and Hex formats.
+Color editing is possible using HSV (°%%), RGB8 (255, 255, 255), Alpha (%), and Hex formats. Colors are stored in the ProjectSettings.
 
 # Installation
 
@@ -19,6 +19,16 @@ This repository is designed to be loaded as a GIT Submodule. How you add these d
 [Refer to this if you're mad enough to use the command line :P](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 Alternatively, download the zip from this page and unpack it into your addons folder under res://addons/MagicMacros
+
+# Future Features
+
+These features may be added in the future:
+
+* Color Constant Map generator.
+* Folders.
+* Swatch linking.
+* Gradients.
+* The ability to apply colors directly to common properties on selected Nodes/Resources.
 
 ---
 
