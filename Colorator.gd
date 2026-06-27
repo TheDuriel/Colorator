@@ -29,7 +29,6 @@ func _ready() -> void:
 	
 	_dock = iColoratorDock.instantiate(self)
 	add_dock(_dock)
-	
 
 
 func _exit_tree() -> void:
